@@ -53,7 +53,6 @@ public class Test {
         String lastPageNum = mainPage.lastPage.getText();
         int lastPage = Integer.parseInt(lastPageNum);
 
-
         List<WebElement> itemsNotDisplayingTable = new ArrayList<>();
         List<WebElement> itemsWithTable = new ArrayList<>();
         for (int i=0; i<lastPage; i++) {
@@ -78,7 +77,6 @@ public class Test {
 
         softAssert.assertEquals(numItemsWithTableOnDescriptionExpected, numberOfItemsDisplayedOnPage, "There are items not containing Table on their description!");
         System.out.println("Elements displayed on page: " + numberOfItemsDisplayedOnPage + " ---> " + "Items with Table on description: " + numItemsWithTableOnDescriptionExpected);
-
 
     }
 
