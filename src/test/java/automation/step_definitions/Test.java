@@ -48,7 +48,7 @@ public class Test {
         helper.scrollIntoView(mainPage.lastPage);
         String lastPageNum = mainPage.lastPage.getText();
         int lastPage = Integer.parseInt(lastPageNum);
-        System.out.println(lastPage);
+
 
         List<WebElement> itemsNotDisplayingTable = new ArrayList<>();
         List<WebElement> itemsWithTable = new ArrayList<>();
@@ -92,9 +92,8 @@ public class Test {
     }
 
     @Then("I empty the Cart")
-    public void i_empty_the_Cart() throws InterruptedException {
+    public void i_empty_the_Cart() {
         itemPage.cartButton.click();
-        Thread.sleep(4000);
         cartPage.emptyCartButton.click();
         cartPage.emptyButton.click();
         String emptyCartConfirmation = cartPage.emptyCartText.getText();

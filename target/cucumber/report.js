@@ -70,7 +70,7 @@ formatter.match({
   "location": "Test.i_empty_the_Cart()"
 });
 formatter.result({
-  "error_message": "java.lang.AssertionError: The following asserts failed:\n\tThere are items not containing Table on their description! expected [540] but found [539]\r\n\tat org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)\r\n\tat org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)\r\n\tat automation.step_definitions.Test.i_empty_the_Cart(Test.java:103)\r\n\tat ✽.I empty the Cart(file:src/test/java/uiFeatures/webstaurant.feature:10)\r\n",
+  "error_message": "java.lang.AssertionError: The following asserts failed:\n\tThere are items not containing Table on their description! expected [540] but found [539]\r\n\tat org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)\r\n\tat org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)\r\n\tat automation.step_definitions.Test.i_empty_the_Cart(Test.java:102)\r\n\tat ✽.I empty the Cart(file:src/test/java/uiFeatures/webstaurant.feature:10)\r\n",
   "status": "failed"
 });
 formatter.embedding("image/png", "embedded0.png", null);
