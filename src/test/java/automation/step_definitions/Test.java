@@ -3,6 +3,7 @@ package automation.step_definitions;
 import automation.page.CartPage;
 import automation.page.ItemPage;
 import automation.page.MainPage;
+import automation.utilities.ConfigurationReader;
 import automation.utilities.Driver;
 import automation.utilities.Helper;
 import io.cucumber.java.en.Given;
@@ -13,7 +14,9 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,7 +36,8 @@ public class Test {
 
     @Given("user is on main page of webstaurantstore")
     public void user_is_on_main_page_of_webstaurantstore()  {
-        driver.get("https://www.webstaurantstore.com");
+        String url = ConfigurationReader.getProperty("ui-config.properties", "webstaurant.url");
+        driver.get(url);
     }
 
     @When("user search for stainless work table")
@@ -68,7 +72,6 @@ public class Test {
 
         int numberNotHavingTableOnDescription = itemsNotDisplayingTable.size();
         System.out.println("There is/are elements not having Table on description: " + numberNotHavingTableOnDescription);
-
 
         int numItemsWithTableOnDescriptionExpected = itemsWithTable.size();
         int numberOfItemsDisplayedOnPage = itemsDisplayedTotal.size();

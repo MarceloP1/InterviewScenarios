@@ -3,11 +3,11 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2022-12-08T01:31:32.026Z",
+        "start_timestamp": "2022-12-08T16:29:04.403Z",
         "before": [
           {
             "result": {
-              "duration": 1547971700,
+              "duration": 1510625400,
               "status": "passed"
             },
             "match": {
@@ -28,7 +28,7 @@
               }
             ],
             "result": {
-              "duration": 447433900,
+              "duration": 451370700,
               "status": "passed"
             },
             "match": {
@@ -41,7 +41,7 @@
         "steps": [
           {
             "result": {
-              "duration": 2139181800,
+              "duration": 2248228900,
               "status": "passed"
             },
             "line": 6,
@@ -53,7 +53,7 @@
           },
           {
             "result": {
-              "duration": 1874067400,
+              "duration": 1771638800,
               "status": "passed"
             },
             "line": 7,
@@ -65,7 +65,7 @@
           },
           {
             "result": {
-              "duration": 23659098000,
+              "duration": 25426581600,
               "status": "passed"
             },
             "line": 8,
@@ -77,7 +77,7 @@
           },
           {
             "result": {
-              "duration": 4129946000,
+              "duration": 3862042300,
               "status": "passed"
             },
             "line": 9,
@@ -89,8 +89,8 @@
           },
           {
             "result": {
-              "error_message": "java.lang.AssertionError: The following asserts failed:\n\tThere are items not containing Table on their description! expected [540] but found [539]\r\n\tat org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)\r\n\tat org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)\r\n\tat automation.step_definitions.Test.i_empty_the_Cart(Test.java:102)\r\n\tat ✽.I empty the Cart(file:src/test/java/uiFeatures/webstaurant.feature:10)\r\n",
-              "duration": 1748431800,
+              "error_message": "java.lang.AssertionError: The following asserts failed:\n\tThere are items not containing Table on their description! expected [540] but found [539]\r\n\tat org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)\r\n\tat org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)\r\n\tat automation.step_definitions.Test.i_empty_the_Cart(Test.java:105)\r\n\tat ✽.I empty the Cart(file:src/test/java/uiFeatures/webstaurant.feature:10)\r\n",
+              "duration": 1866730100,
               "status": "failed"
             },
             "line": 10,
