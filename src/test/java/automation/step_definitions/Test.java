@@ -58,7 +58,7 @@ public class Test {
         int lastPage = Integer.parseInt(lastPageNum);
 
 
-        List<WebElement> itemsNotDisplayingTable = new ArrayList<>();
+        List<String> itemsNotDisplayingTable = new ArrayList<>();
         List<WebElement> itemsWithTable = new ArrayList<>();
         for (int i=0; i<lastPage; i++) {
             for (WebElement element : mainPage.descriptions) {
@@ -67,7 +67,7 @@ public class Test {
                     itemsWithTable.add(element);
                 }
                 else if (!element.getText().contains("Table") || !element.getText().contains("table")){
-                    itemsNotDisplayingTable.add(element);
+                    itemsNotDisplayingTable.add(element.getText());
                 }
             }
             helper.scrollIntoView(mainPage.nextPageButton);
@@ -75,14 +75,15 @@ public class Test {
         }
 
 
+        System.out.println("Element/s with no Table in description: " + itemsNotDisplayingTable);
         int numberNotHavingTableOnDescription = itemsNotDisplayingTable.size();
         System.out.println("There is/are elements not having Table on description: " + numberNotHavingTableOnDescription);
-        //System.out.println("Element not displaying Talbe: " + (itemsNotDisplayingTable.get(0).getText()));
+
         int numItemsWithTableOnDescriptionExpected = itemsWithTable.size();
         int numberOfItemsDisplayedOnPage = itemsDisplayedTotal.size();
 
         softAssert.assertEquals(numItemsWithTableOnDescriptionExpected, numberOfItemsDisplayedOnPage, "There are items not containing Table on their description!");
-        System.out.println("Elements displayed on page: " + numberOfItemsDisplayedOnPage + " ---> " + "Items with Table on description: " + numItemsWithTableOnDescriptionExpected);
+
 
     }
 
@@ -92,9 +93,8 @@ public class Test {
         helper.scrollIntoView(lastElement);
         lastElement.click();
         WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("buyButton")));
-        itemPage.addToCartButton.click();
-        itemPage.cartButton.click();
+        wait.until(ExpectedConditions.elementToBeClickable(itemPage.addToCartButton)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(itemPage.cartButton)).click();
         String numberOfItemsInCart = cartPage.cartItemsCount.getText();
         String actualNumberThatShouldBeOnCart = "1";
         softAssert.assertEquals(numberOfItemsInCart, actualNumberThatShouldBeOnCart, "Cart is empty!");

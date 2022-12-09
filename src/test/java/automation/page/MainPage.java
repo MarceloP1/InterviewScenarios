@@ -23,7 +23,7 @@ public class MainPage {
     public WebElement searchButton;
 
 
-    @FindBy(xpath = "//div[@id='details']")
+    @FindBy(xpath = "//div[@id='details']//a[@data-testid='itemDescription']")
     public List<WebElement> descriptions ;
 
 
