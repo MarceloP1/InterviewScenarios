@@ -11,9 +11,13 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.github.bonigarcia.wdm.ChromeDriverManager;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
 
@@ -53,6 +57,7 @@ public class Test {
         String lastPageNum = mainPage.lastPage.getText();
         int lastPage = Integer.parseInt(lastPageNum);
 
+
         List<WebElement> itemsNotDisplayingTable = new ArrayList<>();
         List<WebElement> itemsWithTable = new ArrayList<>();
         for (int i=0; i<lastPage; i++) {
@@ -69,9 +74,10 @@ public class Test {
             mainPage.nextPageButton.click();
         }
 
+
         int numberNotHavingTableOnDescription = itemsNotDisplayingTable.size();
         System.out.println("There is/are elements not having Table on description: " + numberNotHavingTableOnDescription);
-
+        //System.out.println("Element not displaying Talbe: " + (itemsNotDisplayingTable.get(0).getText()));
         int numItemsWithTableOnDescriptionExpected = itemsWithTable.size();
         int numberOfItemsDisplayedOnPage = itemsDisplayedTotal.size();
 
@@ -85,6 +91,8 @@ public class Test {
         WebElement lastElement = mainPage.lastPageList.get(mainPage.lastPageList.size()-1);
         helper.scrollIntoView(lastElement);
         lastElement.click();
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("buyButton")));
         itemPage.addToCartButton.click();
         itemPage.cartButton.click();
         String numberOfItemsInCart = cartPage.cartItemsCount.getText();

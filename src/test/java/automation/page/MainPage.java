@@ -26,6 +26,7 @@ public class MainPage {
     @FindBy(xpath = "//div[@id='details']")
     public List<WebElement> descriptions ;
 
+
     @FindBy(xpath = "//div[@id='paging']//li[7]")
     public WebElement lastPage ;
 
