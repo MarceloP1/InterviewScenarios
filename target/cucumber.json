@@ -3,11 +3,11 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2022-12-09T17:22:50.129Z",
+        "start_timestamp": "2022-12-09T17:43:45.936Z",
         "before": [
           {
             "result": {
-              "duration": 1668125500,
+              "duration": 1502062700,
               "status": "passed"
             },
             "match": {
@@ -15,10 +15,10 @@
             }
           }
         ],
-        "line": 5,
-        "name": "",
-        "description": "",
-        "id": "this-feature-validates-that-on-the-search-of-stainless-work-table--all-products-resulting-of-this;",
+        "line": 4,
+        "name": "This scenario validates that on the search of stainless work table, all products resulting of this",
+        "description": "  search will have the word Table in its title",
+        "id": "end-to-end-testing-for-adding-and-deleting-item-in-cart;this-scenario-validates-that-on-the-search-of-stainless-work-table--all-products-resulting-of-this",
         "after": [
           {
             "embeddings": [
@@ -28,7 +28,7 @@
               }
             ],
             "result": {
-              "duration": 474794700,
+              "duration": 444298800,
               "status": "passed"
             },
             "match": {
@@ -41,10 +41,10 @@
         "steps": [
           {
             "result": {
-              "duration": 2207203000,
+              "duration": 2227681500,
               "status": "passed"
             },
-            "line": 6,
+            "line": 7,
             "name": "user is on main page of webstaurantstore",
             "match": {
               "location": "Test.user_is_on_main_page_of_webstaurantstore()"
@@ -53,10 +53,10 @@
           },
           {
             "result": {
-              "duration": 1961145500,
+              "duration": 1886858400,
               "status": "passed"
             },
-            "line": 7,
+            "line": 8,
             "name": "user search for stainless work table",
             "match": {
               "location": "Test.user_search_for_stainless_work_table()"
@@ -65,10 +65,10 @@
           },
           {
             "result": {
-              "duration": 25069771100,
+              "duration": 21882896800,
               "status": "passed"
             },
-            "line": 8,
+            "line": 9,
             "name": "assert that every product has the word Table in its title",
             "match": {
               "location": "Test.assert_that_every_product_has_the_word_Table_in_its_title()"
@@ -77,10 +77,10 @@
           },
           {
             "result": {
-              "duration": 4960141800,
+              "duration": 4056342000,
               "status": "passed"
             },
-            "line": 9,
+            "line": 10,
             "name": "I add last item of the search into the Cart",
             "match": {
               "location": "Test.i_add_last_item_of_the_search_into_the_Cart()"
@@ -89,11 +89,11 @@
           },
           {
             "result": {
-              "error_message": "java.lang.AssertionError: The following asserts failed:\n\tThere are items not containing Table on their description! expected [540] but found [539]\r\n\tat org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)\r\n\tat org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)\r\n\tat automation.step_definitions.Test.i_empty_the_Cart(Test.java:111)\r\n\tat ✽.I empty the Cart(file:src/test/java/uiFeatures/webstaurant.feature:10)\r\n",
-              "duration": 2013736300,
+              "error_message": "java.lang.AssertionError: The following asserts failed:\n\tThere are items not containing Table on their description! expected [540] but found [539]\r\n\tat org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)\r\n\tat org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)\r\n\tat automation.step_definitions.Test.i_empty_the_Cart(Test.java:111)\r\n\tat ✽.I empty the Cart(file:src/test/java/uiFeatures/webstaurant.feature:11)\r\n",
+              "duration": 1880860400,
               "status": "failed"
             },
-            "line": 10,
+            "line": 11,
             "name": "I empty the Cart",
             "match": {
               "location": "Test.i_empty_the_Cart()"
@@ -108,9 +108,9 @@
         ]
       }
     ],
-    "name": "This feature validates that on the search of stainless work table, all products resulting of this",
-    "description": "    search will have the word Table in its title",
-    "id": "this-feature-validates-that-on-the-search-of-stainless-work-table--all-products-resulting-of-this",
+    "name": "End to end testing for adding and deleting item in cart",
+    "description": "",
+    "id": "end-to-end-testing-for-adding-and-deleting-item-in-cart",
     "keyword": "Feature",
     "uri": "file:src/test/java/uiFeatures/webstaurant.feature",
     "tags": [

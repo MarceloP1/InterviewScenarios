@@ -1,7 +1,7 @@
 $(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/java/uiFeatures/webstaurant.feature");
 formatter.feature({
-  "name": "This feature validates that on the search of stainless work table, all products resulting of this",
-  "description": "    search will have the word Table in its title",
+  "name": "End to end testing for adding and deleting item in cart",
+  "description": "",
   "keyword": "Feature",
   "tags": [
     {
@@ -10,8 +10,8 @@ formatter.feature({
   ]
 });
 formatter.scenario({
-  "name": "",
-  "description": "",
+  "name": "This scenario validates that on the search of stainless work table, all products resulting of this",
+  "description": "  search will have the word Table in its title",
   "keyword": "Scenario",
   "tags": [
     {
@@ -70,7 +70,7 @@ formatter.match({
   "location": "Test.i_empty_the_Cart()"
 });
 formatter.result({
-  "error_message": "java.lang.AssertionError: The following asserts failed:\n\tThere are items not containing Table on their description! expected [540] but found [539]\r\n\tat org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)\r\n\tat org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)\r\n\tat automation.step_definitions.Test.i_empty_the_Cart(Test.java:111)\r\n\tat ✽.I empty the Cart(file:src/test/java/uiFeatures/webstaurant.feature:10)\r\n",
+  "error_message": "java.lang.AssertionError: The following asserts failed:\n\tThere are items not containing Table on their description! expected [540] but found [539]\r\n\tat org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)\r\n\tat org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)\r\n\tat automation.step_definitions.Test.i_empty_the_Cart(Test.java:111)\r\n\tat ✽.I empty the Cart(file:src/test/java/uiFeatures/webstaurant.feature:11)\r\n",
   "status": "failed"
 });
 formatter.embedding("image/png", "embedded0.png", null);

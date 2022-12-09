@@ -91,8 +91,8 @@ public class Test {
     public void i_add_last_item_of_the_search_into_the_Cart()  {
         WebElement lastElement = mainPage.lastPageList.get(mainPage.lastPageList.size()-1);
         helper.scrollIntoView(lastElement);
-        lastElement.click();
         WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.elementToBeClickable(lastElement)).click();
         wait.until(ExpectedConditions.elementToBeClickable(itemPage.addToCartButton)).click();
         wait.until(ExpectedConditions.elementToBeClickable(itemPage.cartButton)).click();
         String numberOfItemsInCart = cartPage.cartItemsCount.getText();
